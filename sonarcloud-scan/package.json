@@ -1,0 +1,22 @@
+{
+  "name": "Sonarcloud Scan example app",
+  "version": "1.0.0",
+  "description": "Simple app to scan. Cloned from https://github.com/SonarSource/sonarcloud_example_typescript-sqscanner-travis",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "jest --coverage",
+    "tslint": "tslint -t json -o tslint-report.json --project . --force"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "ts-jest": "29.1.1",
+    "typescript": "5.3.2"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.10"
+  }
+}
