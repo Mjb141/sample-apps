@@ -1,6 +1,11 @@
-# TypeScript project analyzed on SonarCloud using Travis
-TypeScript project analyzed on SonarCloud using Travis
+# TypeScript project for analysis in SonarCloud
 
-[![Build status](https://travis-ci.org/SonarSource/sonarcloud_example_typescript-sqscanner-travis.svg?branch=master)](https://travis-ci.org/SonarSource/sonarcloud_example_typescript-sqscanner-travis) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=io.sonarcloud.examples.typescript-sqscanner-travis-project&metric=alert_status)](https://sonarcloud.io/dashboard/index/io.sonarcloud.examples.typescript-sqscanner-travis-project)
+To run:
 
-#### This project is analysed on [SonarCloud](https://sonarcloud.io)!
+`dagger -m "github.com/fluent-ci-templates/sonar-pipeline@mod" call analyze --src . --token $SONAR_TOKEN --organization <ORG> --project-key <KEY> --sources <DIRS>`
+
+* Replace the `<ORG>`, `<KEY>`, and `<DIRS>` with:
+  * `<ORG>`: Organisation name
+  * `<KEY>`: Project key 
+  * `<DIRS>`: Comma-separated list of directories to be scanned
+
