@@ -1,11 +1,12 @@
 # Sample Poetry Lambda app
 
-To run:
-
 * Authenticate with AWS in your terminal
+
+### To run the python yourself:
+
 * `poetry run python lambda_py/handler.py`
 
-To prepare for Lambda:
+### To prepare for Lambda:
 
 * `poetry run pip install -t dist/lambda .`
 * `cd dist/lambda`
@@ -18,3 +19,11 @@ This is formed of:
 * `lambda_py` (the package name)
 * `handler` (the file name that contains the entry function)
 * `handle` (the function name for the entry point)
+
+### To use from Dagger:
+
+#### Building:
+* `dagger call -m "github.com/mjb141/daggerverse/lambda@main" with-credentials --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_ACCESS_KEY --ses-token $AWS_SESSION_TOKEN with-source --source . build`
+
+#### Export the zip for Lambda:
+* `dagger download -m "github.com/mjb141/daggerverse/lambda@main" with-credentials --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_ACCESS_KEY --ses-token $AWS_SESSION_TOKEN with-source --source . export`
