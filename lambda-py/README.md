@@ -23,13 +23,13 @@ This is formed of:
 ### To use from Dagger:
 
 #### Building:
-* `dagger call -m "github.com/mjb141/daggerverse/lambda@main" with-source --source . build`
+* `dagger call -m "github.com/mjb141/daggerverse/lambda@main" with-sdk --sdk python with-source --source . build`
 
 #### Interactive shell:
-* `dagger shell -m "github.com/mjb141/daggerverse/lambda@main" with-source --source . build`
+* `dagger shell -m "github.com/mjb141/daggerverse/lambda@main" with-sdk --sdk python with-source --source . build`
 
 #### Export the zip for Lambda:
-* `dagger download -m "github.com/mjb141/daggerverse/lambda@main" with-source --source . export`
+* `dagger download -m "github.com/mjb141/daggerverse/lambda@main" with-sdk --sdk python with-source --source . export`
 
 #### Publish the zip to S3:
-* `dagger call -m "github.com/mjb141/daggerverse/lambda@main" with-credentials --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_ACCESS_KEY --ses-token $AWS_SESSION_TOKEN with-source --source . publish --bucket_name $BUCKET_NAME --object-key $OBJECT_NAME`
+* `dagger call -m "github.com/mjb141/daggerverse/lambda@main" with-credentials --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_ACCESS_KEY --ses-token $AWS_SESSION_TOKEN with-sdk --sdk python with-source --source . publish --bucket_name $BUCKET_NAME --object-key $OBJECT_NAME`
